@@ -12,16 +12,16 @@ int main()
     cin >> number;
     
     if (choice == 1) {
-        for (int i = 0; i < number; i++) {
-            cout << "\n";
-            for (int j = 0; j < number; j++) {
+        for (int row = 0; row < number; row++) {
+            cout << endl;
+            for (int col = 0; col < number; col++) {
                 cout << '*';
             } 
         }
     } else {
-        for (int i = 0; i < number; i++) {
-            cout << "\n";
-            for (int j = 0; j <= i; j++) {
+        for (int row = 0; row < number; row++) {
+            cout << endl;
+            for (int col = 0; col <= row; col++) {
                 cout << '*';
             }
         }
