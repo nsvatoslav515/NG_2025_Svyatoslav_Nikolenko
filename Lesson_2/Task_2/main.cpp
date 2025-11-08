@@ -22,11 +22,10 @@ int main()
         }
     }
     
-    // Выводим график
     for (int row = 1; row <= max; row++) {
         cout << endl;
-        for (int i = 0; i < size; i++) {
-            if (array[i] >= row) {
+        for (int col = 0; col < size; col++) {
+            if (array[col] >= row) {
                 cout << '*';
             } else {
                 cout << ' ';
