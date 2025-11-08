@@ -4,6 +4,10 @@ using namespace std;
 
 int main()
 {
+    int accountNumber;
+    cout << "Enter account number: " << endl;
+    cin >> accountNumber;
+
     int accounts[10] = {0,0,0,0,0,0,0,0,0,1000};
     int choice;
     
@@ -17,9 +21,6 @@ int main()
     
     switch (choice) {
         case 1: {
-            int accountNumber;
-            cout << "Enter account number: " << endl;
-            cin >> accountNumber;
             cout << "Account balance: " << accounts[accountNumber - 1];
             break;
         }
@@ -35,9 +36,6 @@ int main()
         
         case 3: {
             int amount;
-            int accountNumber;
-            cout << "Enter account number: ";
-            cin >> accountNumber;
             cout << "How much would you like to withdraw?" << endl;
             cin >> amount;
             if (accounts[accountNumber - 1] >= amount) {
@@ -51,9 +49,6 @@ int main()
         
         case 4: {
             int amount;
-            int accountNumber;
-            cout << "Enter account number: ";
-            cin >> accountNumber;
             cout << "How much would you like to deposit?" << endl;
             cin >> amount;
             cout << "Completed! You deposited " << amount << " into account: " << accountNumber << endl;
