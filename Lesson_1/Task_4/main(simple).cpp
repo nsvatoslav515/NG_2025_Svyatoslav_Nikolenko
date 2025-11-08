@@ -6,9 +6,12 @@ int main()
 {
     int choice, number;
     
-    cout << "1 or 2? ";
+    cout << "Choose your image: " << endl;
+    cout << "1 - Square" << endl;
+    cout << "2 - Triangle" << endl;
     cin >> choice;
-    cout << "Quantity? ";
+    
+    cout << "Amount? ";
     cin >> number;
     
     if (choice == 1) {
