@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 #include <cctype>
 using namespace std;
 
@@ -12,30 +11,31 @@ int main() {
     int consonatsLetters = 0;
 
     cout << "Enter word: " << endl;
-    string word;
+    char word[100];
     cin >> word;
 
 
-    for (char letter : word) {
-        letter = tolower(letter);
-        bool found = false;
+    for (int counter = 0; word[counter] != '\0'; counter++) {
+        char currentChar = tolower(word[counter]);
+        bool isVowel = false;
 
-        for (char vow : vowels) {
-            if (letter == vow) {
-                vowelsLetters++;
-                allLeters++;
-                found = true;
+        for (int vow = 0; vow < 5; vow++) {
+            if (vowels[vow] == currentChar) {
+                isVowel = true;
                 break;
             }
         }
-        if (!found) {
+        if (isVowel) {
+            vowelsLetters++;
+            allLeters++;
+        } else {
             consonatsLetters++;
             allLeters++;
         }
     }
 
-    double procentvowels = (vowelsLetters * 100) / allLeters;
-    double procentconsonats = (consonatsLetters * 100) / allLeters;
+    double procentvowels = (vowelsLetters * 100.0) / allLeters;
+    double procentconsonats = (consonatsLetters * 100.0) / allLeters;
 
     cout << "Vowels: " << vowelsLetters << endl;
     cout << "Consonats: " << consonatsLetters << endl;
