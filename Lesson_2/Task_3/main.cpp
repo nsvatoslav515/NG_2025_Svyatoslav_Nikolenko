@@ -16,11 +16,11 @@ int main() {
 
 
     for (int counter = 0; word[counter] != '\0'; counter++) {
-        char currentChar = tolower(word[counter]);
+        char currentChar = word[counter];
         bool isVowel = false;
 
         for (int vow = 0; vow < 5; vow++) {
-            if (vowels[vow] == currentChar) {
+            if (vowels[vow] == currentChar || vowels[vow] - 32 == currentChar) {
                 isVowel = true;
                 break;
             }
