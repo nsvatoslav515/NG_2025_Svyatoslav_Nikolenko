@@ -8,7 +8,7 @@ int main()
     cout << "Enter account number: " << endl;
     cin >> accountNumber;
 
-    int accounts[10] = {0,0,0,0,0,0,0,0,0,1000};
+    int accounts[10] = {0,0,0,0,0,0,0,0,0,0};
     int choice;
     
     cout << "What do you want?" << endl;
